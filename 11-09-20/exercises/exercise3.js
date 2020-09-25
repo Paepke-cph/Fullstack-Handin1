@@ -3,9 +3,9 @@ var now = require("performance-now")
 const URL = 'https://swapi.dev/api/people/'
 
 // Await
-function fetchPerson(url){
-    let response = fetch(url).then(res => res.json());
-    return response;
+async function fetchPerson(url){
+    let response = await fetch(url);
+    return await response.json();
 }
 
 // Promise
@@ -17,8 +17,8 @@ function fetchPersonPromise(url) {
 
 async function printNames() {
     var start = now()
-    const person1 = await fetchPerson(URL+'1')
-    const person2 = await fetchPerson(URL+'2')
+    const person1 = fetchPerson(URL+'1')
+    const person2 = fetchPerson(URL+'2')
     var end = now()
     console.log("Seq!  " + start.toFixed(3)) // the number of milliseconds the current node process is running
     console.log("Seq!  " + (start-end).toFixed(3))

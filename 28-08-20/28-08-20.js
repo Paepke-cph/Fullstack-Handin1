@@ -1,3 +1,5 @@
+const { count } = require("console")
+
 // These are use all over the place.
 var names = ["Lars", "Peter", "Jan", "Bo"]
 var numbers = [2, 3, 67, 33]
@@ -114,7 +116,30 @@ console.log(`After this line aNumber has the following value: ${aNumber}`)
 
 // THIS
 //////////////////////////////////////////////////////////////////////////////////////////////////
+function City(name,country,population){
+    this.name = name;
+    this.country = country;
+    this.population = population;
 
+    this.printCity() {
+        // Her vil this være objektet (til venstre for . notationen, hvor metoden bliver kaldt).
+        console.log(this);
+    }
+}
+var c = new City("Copenhagen", "Denmark", "5mil")
+
+class Person {
+    constructor(name, age){
+        // Inden i en classes constructor, så er det, den instance af object (som vi er igang med at oprette) som this peger på.
+        this.name = name;
+        this.age = age;
+    }
+
+    printName = function() {
+        console.log(this);
+    }
+
+}
 
 
 // Closures
