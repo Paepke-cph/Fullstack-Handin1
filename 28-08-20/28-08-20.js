@@ -133,10 +133,17 @@ class Person {
         // Inden i en classes constructor, så er det, den instance af object (som vi er igang med at oprette) som this peger på.
         this.name = name;
         this.age = age;
+
+        // For at metoden printPersonAsync vil kunne gøre brug af *this* kan vi bruge bind, vi kunne også bare have gjort brug af () => {} notationen i stedet.
+        this.printPerson = this.show.bind(this);
     }
 
-    printName = function() {
+    printPerson = function() {
         console.log(this);
+    }
+
+    printPersonAsync() {
+        setTimeout(this.printPerson, 2000);
     }
 
 }
