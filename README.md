@@ -7,3 +7,7 @@ Hver uges opgaver har hver deres undermappe og i hver af disse mapper findes opg
 3. [11-09-20](https://github.com/Paepke-cph/Fullstack-Handin1/tree/master/11-09-20)<br>
 4. [18-09-20](https://github.com/Paepke-cph/Fullstack-Handin1/tree/master/18-09-20)<br>
 5. [25-09-20](https://github.com/Paepke-cph/Fullstack-Handin1/tree/master/25-09-20)<br>
+
+
+## HandIn Docs
+[HandIn.pdf](https://github.com/Paepke-cph/Fullstack-Handin1/blob/master/HandIn.pdf)
